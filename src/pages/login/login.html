@@ -1,0 +1,60 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  
+
+</ion-header>
+
+
+<ion-content padding  class="bg-style">
+
+  <br> <br> <br> <br> <br>
+    <img src="assets/imgs/Unisimon.png"/>
+
+    <br> <br> <br> 
+    <div>
+    <form  (ngSubmit)="login()" class="bg-style">
+        <ion-list>
+          
+          <ion-item class="bg-style">
+            <ion-icon name="person" item-start></ion-icon>
+            <ion-label stacked>Codigo de Usuario:</ion-label>
+            <ion-input [(ngModel)]="data.usuario" name="codigo" type="number" placeholder="codigo"></ion-input>
+          </ion-item>
+          <ion-item class="bg-style">
+              <ion-icon name="eye" item-start></ion-icon>
+              <ion-label stacked>Contraseña:</ion-label>
+              <ion-input [(ngModel)]="data.clave" name="password" type="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+          <ion-list>
+            <br>
+            <ion-item  class="bg-style">
+                <ion-icon name="people" item-start></ion-icon>
+              <ion-label>tipo</ion-label> 
+              <ion-select [(ngModel)]="data.tipo" name="tipo" interface="popover">
+                <ion-option value="estudiante">Estudiante</ion-option>
+                <ion-option value="docente">Docente</ion-option>
+                <ion-option value="administrativo">Administrativo</ion-option>
+                
+              </ion-select>
+            </ion-item>
+          </ion-list> 
+           
+          </ion-list>
+        <div padding>
+          <button ion-button block type="submit" >Entrar</button>
+        </div>
+      </form>
+    
+<br>
+
+          <button ion-button color="secondary" (click)="resetPassword()" clear>Olvidaste tu contraseña?</button>
+<br>
+</div>
+
+</ion-content>

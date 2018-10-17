@@ -1,0 +1,206 @@
+<!--
+  Generated template for the HorarioEstudiantePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button  menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Horario de clases</ion-title>
+    <ion-buttons start>
+        <button ion-button icon-only (click)="salir()">
+          <ion-icon md="md-exit" ></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <div > 
+    <ion-row >
+        
+         
+           <h4>Lunes</h4> 
+        
+    </ion-row>
+    <ion-row class="nav">
+        <ion-col class="bordes" col-3   color="primary"> 
+            <B> Hora</B>  
+        </ion-col>
+        <ion-col class="bordes" col-7   color="primary"> 
+            <B>Asignatura</B>
+        </ion-col>
+        <ion-col class="bordes" col-2   color="primary"> 
+            <b>Salon</b>
+        </ion-col>
+    </ion-row>
+    <div  *ngFor="let horario of horarios">
+      <div *ngIf="horario.dia=='Lunes'">
+      <ion-row >
+          <ion-col class="bordes" col-3   color="primary"> 
+              {{horario.inicio}} - {{horario.fin}}
+          </ion-col>
+          <ion-col class="bordes" col-7  color="primary">
+              {{horario.asignatura}}
+          </ion-col>
+          <ion-col class="bordes" col-2 color="primary">
+              {{horario.salon}}
+          </ion-col>
+        </ion-row>
+      </div>
+          
+      </div>
+    </div>
+    <br>
+
+    <div  >
+        <ion-row >
+            
+               <h4> Martes </h4> 
+            
+        </ion-row>
+        <ion-row class="nav">
+            <ion-col class="bordes" col-3   color="primary"> 
+                <B> Hora</B>  
+            </ion-col>
+            <ion-col class="bordes" col-7   color="primary"> 
+                <B>Asignatura</B>
+            </ion-col>
+            <ion-col class="bordes" col-2   color="primary"> 
+                <b>Salon</b>
+            </ion-col>
+        </ion-row>
+        <div  *ngFor="let horario of horarios">
+            <div *ngIf="horario.dia=='Lunes'">
+          <ion-row  >
+              <ion-col class="bordes" col-3   color="primary"> 
+                  {{horario.inicio}} - {{horario.fin}}
+              </ion-col>
+              <ion-col class="bordes" col-7  color="primary">
+                  {{horario.asignatura}}
+              </ion-col>
+              <ion-col class="bordes" col-2 color="primary">
+                  {{horario.salon}}
+              </ion-col>
+            </ion-row>
+          </div>
+              
+          </div>
+        </div>
+        <br>
+        <div  >
+        <ion-row   >
+            
+              <h4>Miercoles	</h4>  
+            
+        </ion-row>
+        <ion-row class="nav">
+            <ion-col class="bordes" col-3   color="primary"> 
+                <B> Hora</B>  
+            </ion-col>
+            <ion-col class="bordes" col-7   color="primary"> 
+                <B>Asignatura</B>
+            </ion-col>
+            <ion-col class="bordes" col-2   color="primary"> 
+                <b>Salon</b>
+            </ion-col>
+        </ion-row>
+            <div  *ngFor="let horario of horarios">
+                <div *ngIf="horario.dia=='Lunes'">
+              <ion-row  >
+                  <ion-col class="bordes" col-3   color="primary"> 
+                      {{horario.inicio}} - {{horario.fin}}
+                  </ion-col>
+                  <ion-col class="bordes" col-7  color="primary">
+                      {{horario.asignatura}}
+                  </ion-col>
+                  <ion-col class="bordes" col-2 color="primary">
+                      {{horario.salon}}
+                  </ion-col>
+                </ion-row>
+              </div>
+                  
+              </div>
+            </div>
+            <br>
+
+            <div  >
+            <ion-row >
+                 
+                <h4> Jueves </h4>
+                
+            </ion-row>
+            <ion-row class="nav">
+                <ion-col class="bordes" col-3   color="primary"> 
+                    <B> Hora</B>  
+                </ion-col>
+                <ion-col class="bordes" col-7   color="primary"> 
+                    <B>Asignatura</B>
+                </ion-col>
+                <ion-col class="bordes" col-2   color="primary"> 
+                    <b>Salon</b>
+                </ion-col>
+            </ion-row>
+                <div  *ngFor="let horario of horarios">
+                    <div *ngIf="horario.dia=='Lunes'">
+                  <ion-row   >
+                      <ion-col class="bordes" col-3   color="primary"> 
+                          {{horario.inicio}} - {{horario.fin}}
+                      </ion-col>
+                      <ion-col class="bordes" col-7  color="primary">
+                          {{horario.asignatura}}
+                      </ion-col>
+                      <ion-col class="bordes" col-2 color="primary">
+                          {{horario.salon}}
+                      </ion-col>
+                    </ion-row>
+                  </div>
+                      
+                  </div>
+                </div>
+                <br>
+                <div  >
+
+                <ion-row >
+                
+                   <h4> Viernes </h4> 
+                
+            </ion-row>
+            <ion-row class="nav">
+                        <ion-col class="bordes" col-3   color="primary"> 
+                            <B> Hora</B>  
+                        </ion-col>
+                        <ion-col class="bordes" col-7   color="primary"> 
+                            <B>Asignatura</B>
+                        </ion-col>
+                        <ion-col class="bordes" col-2   color="primary"> 
+                            <b>Salon</b>
+                        </ion-col>
+                    </ion-row>
+                    <div  *ngFor="let horario of horarios">
+                        <div *ngIf="horario.dia=='Lunes'">
+                      <ion-row  >
+                          <ion-col class="bordes" col-3   color="primary"> 
+                              {{horario.inicio}} - {{horario.fin}}
+                          </ion-col>
+                          <ion-col class="bordes" col-7  color="primary">
+                              {{horario.asignatura}}
+                          </ion-col>
+                          <ion-col class="bordes" col-2 color="primary">
+                              {{horario.salon}}
+                          </ion-col>
+                        </ion-row>
+                      </div>
+                         
+                      </div>
+                    </div>
+                    
+
+</ion-content>

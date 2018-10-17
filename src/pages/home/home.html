@@ -1,14 +1,37 @@
-<ion-header>
+<ion-header no-border>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+
+      <button ion-button  menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title color="primary" >
+            Universidad Simón Bolívar
+          </ion-title>
+            <ion-buttons start>
+                <button ion-button icon-only (click)="salir()">
+                  <ion-icon md="md-exit" ></ion-icon>
+                </button>
+              </ion-buttons>
+            
+   
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="bg-style" padding>
+  <ion-card *ngFor="let not of noticias">
+      <img [src]="not.imagen"/>
+    <ion-card-content>
+      <ion-card-title>
+        <h2>
+            {{not.titulo}}
+        </h2>
+      
+        </ion-card-title>
+      <p >
+        {{not.cuerpo}}
+      </p>
+      
+      <button ion-button color="secondary" (click)="muestraNoticia(not)" clear>Ver noticia completa</button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

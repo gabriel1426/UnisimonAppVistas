@@ -1,0 +1,40 @@
+<!--
+  Generated template for the VerNoticiaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons start>
+          <button ion-button icon-only (click)="cerrarModal()">
+            <ion-icon md="md-arrow-round-back" ></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>verNoticia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card ng-if="noticias">
+        <img [src]="noticias.imagen"/>
+      <ion-card-content>
+        <ion-card-title>
+          <h2>
+              {{noticias.titulo}}
+          </h2>
+        
+          </ion-card-title>
+        <p >
+          {{noticias.cuerpo}}
+        </p>
+        
+        <button ion-button color="secondary" (click)="muestraSitio()" clear>Ver noticia completa</button>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

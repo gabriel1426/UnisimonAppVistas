@@ -1,0 +1,254 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button  menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>perfil</ion-title>
+    <ion-buttons start>
+        <button ion-button icon-only (click)="salir()">
+          <ion-icon md="md-exit" ></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="position: relative;" class="nav" >
+
+            <div class="arriba"> 
+              <br> 
+              <br>
+              <br>
+              <br>
+              <br> <br>
+              <br>
+              <br>
+              
+            </div>
+            <div style="position: absolute; left: 80px; top: 30px; z-index: 3;"> 
+                <img class="redonda" src="http://i3.sinaimg.cn/edu/2014/1126/U11035P42DT20141126103058.jpg" alt="">
+            </div>
+        <div class="abajo" *ngIf="perfil!=null" padding>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+       
+        <ion-row  >
+          <ion-col   class="bg-style" > 
+            <b>Codigo</b>
+          </ion-col>
+          <ion-col col-7  >
+            {{perfil.codigo}}
+          </ion-col>
+        </ion-row>
+
+        <ion-row  >
+          <ion-col class="bg-style">
+            <b>Nombre</b>
+          </ion-col>
+          <ion-col col-7>
+           {{perfil.nombre}} 
+          </ion-col>
+        </ion-row>
+        
+        <ion-row  >
+          <ion-col class="bg-style">
+            <b>Email Institucional</b>
+          </ion-col>
+          <ion-col col-7>
+              <p value="datos.emailpersonal"></p>
+          </ion-col>
+          </ion-row>
+          
+          <ion-row >
+            <ion-col class="bg-style">
+             <b>Email personal</b>
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.emailpersonal}}
+            </ion-col>
+          </ion-row>
+         
+          <ion-row>
+            <ion-col class="bg-style">
+             <b> Direccion</b>
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.direccion}}
+            </ion-col>
+          </ion-row>
+          
+          <ion-row >
+            <ion-col class="bg-style">
+              <b>Telefono</b>
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.telefono}}
+            </ion-col>
+          </ion-row>
+          
+          <ion-row  >
+            <ion-col class="bg-style">
+             <b>Fecha de nacimiento</b> 
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.fechanacimiento}}
+            </ion-col>
+          </ion-row>
+          
+          <ion-row >
+            <ion-col class="bg-style">
+              <b>Tipo de Doc</b> 
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.tipodocumento}}
+            </ion-col>
+          </ion-row>
+          
+          <ion-row  >
+            <ion-col class="bg-style">
+              <b>Número de Doc</b>
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.numdocumento}}
+            </ion-col>
+          </ion-row>
+         
+          <ion-row >
+            <ion-col class="bg-style">
+             <b> Genero</b>
+            </ion-col>
+            <ion-col col-7>
+              {{perfil.genero}}
+            </ion-col>
+          </ion-row>
+          
+
+          <ng-container *ngIf="tipo==='estudiante'; else elseTemplate">
+              <ion-row  >
+                  <ion-col class="bg-style">
+                    <b>Carrera</b>
+                  </ion-col>
+                  <ion-col col-7>
+                    {{perfil.carrera}}
+                  </ion-col>
+              </ion-row>
+              
+              <ion-row >
+                    <ion-col class="bg-style">
+                      <b>Semestre</b>
+                    </ion-col>
+                    <ion-col col-7>
+                      {{perfil.semestre}}
+                    </ion-col>
+                </ion-row>
+               
+                <ion-row  >
+                      <ion-col class="bg-style">
+                       <b>Promedio</b> 
+                      </ion-col>
+                      <ion-col col-7>
+                        {{perfil.promedio}}
+                      </ion-col>
+                </ion-row>
+               
+                <ion-row >
+                    <ion-col class="bg-style">
+                     <b>Nivel</b> 
+                    </ion-col>
+                    <ion-col col-7>
+                        {{perfil.nivelcarrera}}
+                    </ion-col>
+              </ion-row>
+              
+              <ion-row  >
+                  <ion-col class="bg-style">
+                   <b>Clave</b> 
+                  </ion-col>
+                  <ion-col col-7>
+                      {{perfil.clave}}
+                  </ion-col>
+            </ion-row>
+            
+          </ng-container>
+          <ng-template #elseTemplate >
+
+          <ng-container *ngIf="tipo=='docente'; else elseTemplate">
+              <ion-row  >
+                  <ion-col class="bg-style">
+                    <b>Programa</b>
+                  </ion-col>
+                  <ion-col col-7>
+                      {{perfil.programa}}
+                  </ion-col>
+            </ion-row>
+            
+            <ion-row >
+                <ion-col class="bg-style">
+                 <b>Vinculacion</b> 
+                </ion-col>
+                <ion-col col-7>
+                    {{perfil.vinculacion}}
+                </ion-col>
+          </ion-row>
+         
+          <ion-row  >
+              <ion-col class="bg-style">
+                <b>Clave</b>
+              </ion-col>
+              <ion-col col-7>
+                  {{perfil.clave}}
+              </ion-col>
+        </ion-row>
+          </ng-container>
+          <ng-template #elseTemplate>
+            
+              <ion-row  >
+                  <ion-col class="bg-style">
+                    <b>Dependencia</b>
+                  </ion-col>
+                  <ion-col col-7>
+                      {{perfil.dependencia}}
+                  </ion-col>
+            </ion-row>
+            
+            <ion-row  >
+                <ion-col class="bg-style">
+                  <b>Cargo</b>
+                </ion-col>
+                <ion-col col-7>
+                    {{perfil.cargo}}
+                </ion-col>
+          </ion-row>
+          
+              <ion-row  >
+                  <ion-col class="bg-style">
+                    <b>Clave</b>
+                  </ion-col>
+                  <ion-col col-7>
+                      {{perfil.clave}}
+                  </ion-col>
+            </ion-row>
+            
+          </ng-template>
+          </ng-template>
+          <br>
+          <button ion-button block (click)="muestraSitio()" >Actualizar datos</button>
+      </div>
+
+      
+      
+      
+
+</ion-content>

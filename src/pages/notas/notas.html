@@ -1,0 +1,76 @@
+<!--
+  Generated template for the NotasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar >
+      <button ion-button  menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>notas</ion-title>
+    <ion-buttons start>
+            <button ion-button icon-only (click)="salir()">
+              <ion-icon md="md-exit" ></ion-icon>
+            </button>
+          </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg-style"padding>
+
+  <h2>Promedio</h2>
+  <div>
+        <ion-row  class="nav" align-items-center>
+            <ion-col class="asig">
+               <b>Promedio</b> 
+            </ion-col>
+            <ion-col class="asig">
+                <b>Creditos aprobados</b>
+                </ion-col>
+          </ion-row>
+          <ion-row  class="nav" justify-content-center>
+              <ion-col   class="nota"> 
+                 3.5
+              </ion-col>
+              <ion-col   class="nota" justify-content-center>
+                 141
+              </ion-col>
+            </ion-row>
+            <br>
+        </div>
+
+<h2>Materias matriculadas</h2>
+  <div  *ngFor="let nota of notas">
+    <ion-row  class="nav" align-items-center>
+        
+        <ion-col class="asig">
+                <b> {{nota.asignatura}}</b>
+        </ion-col>
+       
+      </ion-row>
+      <ion-row  class="nav" align-items-center>
+          <ion-col   class="nota"> 
+                <b> PP:  {{nota.primerprevio}}</b>
+          </ion-col>
+          <ion-col   class="nota">
+                <b> SP:  {{nota.segundoprevio}}</b>
+          </ion-col>
+          <ion-col  class="nota">
+                <b> EXF: {{nota.exafinal}}</b>
+          </ion-col>
+          <ion-col   class="nota">
+                <b> DEF: {{nota.definitiva}}</b>
+          </ion-col>
+          
+        </ion-row>
+        <br>
+    </div>
+    <h2>Historico de notas</h2>
+    
+
+</ion-content>
