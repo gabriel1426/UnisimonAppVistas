@@ -1,0 +1,7 @@
+{
+  "name": "UnisimonApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
